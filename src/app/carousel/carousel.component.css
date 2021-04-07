@@ -1,0 +1,49 @@
+/* You can add global styles to this file, and also import other style files */
+div.carousel-multi-item > ol.carousel-indicators {
+    display: none;
+}
+.controls-top {
+    position: absolute;
+    display: flex;
+    vertical-align: middle;
+    height: 100%;
+    width: 100%;
+}
+.controls-top > a.btn-floating {
+    font-size: xxx-large;
+    z-index: 1;
+}
+a:first.btn-floating {
+    display: flex;
+    vertical-align: middle;
+}
+a:nth-child(1).btn-floating {
+    right: 20px;
+    /* top: 50%; */
+    position: absolute;
+    /* vertical-align: middle; */
+    height: 100%;
+}
+a:nth-child(2).btn-floating {
+    right: 35px;
+    /* top: 50%; */
+    position: absolute;
+    /* vertical-align: middle; */
+    height: 100%;
+}
+a.btn-floating i.fa-chevron-left, a.btn-floating i.fa-chevron-right {
+    top: 45%;
+    position: absolute;
+}
+mdb-card {
+    background-color: transparent;
+}
+mdb-card-title h4 {
+    color: #00DBEA; font-size: 20px;
+}
+mdb-card-body p:nth-child(1) {
+    color: #FFFFFF; font-size: 17px;
+}
+mdb-card-body p:nth-child(2) {
+    color: #F9CD3F;font-size: 30px;
+}

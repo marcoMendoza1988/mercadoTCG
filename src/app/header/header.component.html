@@ -1,0 +1,36 @@
+<div class="col-lg-12 col-sm-12 px-0">
+    <div class="alert py-1 m-0" style="background-color: #0156ff;color: #ffffff;border-radius: 0;">
+        <div class="row">
+            <div class="col-md-6 mb-banner">
+                <label>Actualizamos las tarjetas continuamente</label>
+            </div>
+            <div class="col-md-6 justify-content-end d-none d-sm-none d-md-block">
+                <label class="nav justify-content-end">Comunicate con nosotros (998) 1234 5678 <i class="fab fa-facebook-square p-1"></i> <i class="fab fa-instagram-square p-1"></i></label>
+            </div>
+        </div>    
+    </div>
+
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-logo" style="z-index:1;background-image: linear-gradient(to right, #000 , transparent); background-color:rgba(192,192,192,0.3);">
+        <a class="navbar-brand" [routerLink]="'.'">
+            <img class="img-fluid img-logo" width="280" src="../../assets/img/logo.png" />
+        </a>
+        
+            
+        <!-- Step 3: Toggle the value of the property when the toggler button is clicked. -->
+        <button class="navbar-toggler d-none d-sm-none" type="button" (click)="isMenuCollapsed = !isMenuCollapsed">
+        &#9776;
+        </button>
+        
+        <div [ngbCollapse]="isMenuCollapsed" class="nav justify-content-end collapse navbar-collapse d-none d-sm-none">
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control badge-pill mr-sm-2" type="search" placeholder="Que tarjeta estas buscando?" aria-label="Search">
+            </form>
+            <button type="button" class="badge badge-pill" style="padding-top:12px; padding-bottom:12px;padding-left: 25px;padding-right: 25px;background-color: #0156ff; color: #ffffff;">Iniciar sesión</button>
+        </div>
+        <div class="col-12 justify-content-middle d-block d-sm-block d-md-none d-lg-none">
+            <form class="form-inline row mx-auto">
+                <input class="form-control badge-pill mr-sm-2 p-4" style="width: 100%;" type="search" placeholder="Que tarjeta estas buscando?" aria-label="Search">
+            </form>
+        </div>
+    </nav>
+</div>

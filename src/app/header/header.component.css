@@ -1,0 +1,13 @@
+@media (max-width: 576px) {
+    .mb-banner {
+        text-align: center;
+    }
+    .navbar-brand {
+        width: 100%;
+    }
+    .img-logo {
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+    }
+}

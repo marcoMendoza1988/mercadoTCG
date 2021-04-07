@@ -1,0 +1,34 @@
+<mdb-carousel [animation]="'slide'" [ngSwitch]="carouselDisplayMode" [isControls]="true" class="carousel-multi-item multi-animation" [type]="'carousel-multi-item'">
+    <ng-container *ngSwitchCase="'single'">
+      <mdb-carousel-item *ngFor="let card of cards">
+        <mdb-card class="my-0">
+          <mdb-card-img class="card_image" [src]="card.img" alt="Card image cap"></mdb-card-img>
+          <mdb-card-body>
+            <mdb-card-title>
+              <h4 style="color: #00DBEA; font-size: 20px;"> {{ card.title }}</h4>
+            </mdb-card-title>
+            <p style="color: #FFFFFF; font-size: 17px;">{{ card.description }}</p>
+            <p style="color: #F9CD3F;font-size: 30px;">{{card.buttonText}}</p>
+          </mdb-card-body>
+        </mdb-card>
+      </mdb-carousel-item>
+    </ng-container>
+  
+    <ng-container *ngSwitchCase="'multiple'">
+      <mdb-carousel-item *ngFor="let item of slides; let i = index">
+        <div class="col-md-3" *ngFor="let card of item; let cardIndex = index">
+          <mdb-card class="my-1">
+            <mdb-card-img [src]="card.img" alt="Card image cap"></mdb-card-img>
+            <mdb-card-body>
+              <mdb-card-title>
+                <h4 style="color: #00DBEA; font-size: 20px;">{{card.title}}</h4>
+              </mdb-card-title>
+              <p style="color: #FFFFFF; font-size: 17px;">{{card.description}}</p>
+              <p style="color: #F9CD3F;font-size: 30px;">{{card.buttonText}}</p>
+            </mdb-card-body>
+          </mdb-card>
+        </div>
+        <div class="img_rectangle"></div>
+      </mdb-carousel-item>
+    </ng-container>
+  </mdb-carousel>

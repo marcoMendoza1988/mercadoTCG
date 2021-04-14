@@ -1,0 +1,13 @@
+.contact_form {
+    background-image: url('../assets/img/bg_contactForm.png'); 
+    background-repeat: no-repeat;
+    background-size: auto;
+    color: #fff; 
+    opacity: 0.9;
+}
+@media (max-width: 576px) {    
+    .contact_form {
+        background-image: url('../assets/img/bg_contactform_mobile.png'); 
+        background-size: cover;
+    }
+}

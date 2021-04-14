@@ -1,0 +1,29 @@
+.stepBarClass {
+    width:90%;
+    height:10px;
+    background:lightgray;
+    border-radius:5px;
+}
+
+.stepSliderClass
+{
+    width:20px;
+    height:20px;
+    background:lightgray;
+    border-radius:50%;    
+    border:1px solid royalblue;
+    bottom:-50% !important;
+}
+.stephighlightClass{
+    background:royalblue;
+}
+.banner-registration {
+    width: 100%; 
+    padding: 0 2rem;
+}
+
+@media (max-width: 576px) {
+    .banner-registration {
+        padding: 0 ;
+    }
+}

@@ -2,6 +2,35 @@
     <div class="row">
         <app-header style="width: 100%;"></app-header>
         <router-outlet></router-outlet>
+        
+        <form class="col-lg-12 col-sm-12 my-5 p-5 contact_form">
+            <div class="row">
+                <label class="form-label col-md-6 col-sm-12" style="font-size: 25px;">Contactanos</label>
+                <label class="form-label col-md-6 col-sm-12" style="width: 100%;">
+                    <span><i class="fas fa-mobile-alt"></i> (55) 9876 5432 / (55) 9876 5432</span> 
+                    <span style="position: absolute; right: 15px;"><i class="fas fa-envelope"></i> hola@mercadotcg.com</span>
+                </label>
+                <div class="col-md-6">
+                    <div class="input-group input-group-sm mb-3">
+                        <span class="input-group-text white" id="inputGroup-sizing-sm" style="border-radius: 50% 0 0 50%;"><i class="fas fa-user"></i></span>
+                        <input type="text" class="form-control mr-sm-2 p-2 badge-pill" id="nombre" placeholder="Nombre">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="input-group input-group-sm mb-3">
+                        <span class="input-group-text  white" id="inputGroup-sizing-sm" style="border-radius: 50% 0 0 50%;"><i class="fas fa-envelope"></i></span>
+                        <input type="text" class="form-control mr-sm-2 p-2 badge-pill" id="email" placeholder="e-mail">
+                    </div>
+                </div>
+                <div class="col-md-9">
+                <label for="inputZip" class="form-label"></label>
+                <textarea type="text" class="form-control mr-sm-2 p-2" id="comentario" placeholder="Escribe un comentario"></textarea>
+                </div>
+                <div class="col-md-3 mt-4">
+                    <button type="submit" class="btn btn-link" style="color: #ffffff;">Contactanos <i class="fas fa-chevron-right" style="margin-left: 1rem; font-size: medium; top: 2px;"></i> </button>
+                </div>
+            </div>
+        </form>
         <footer class="col-lg-12 col-sm-12" style="background-image: url(../../assets/img/bg_footer.png); background-repeat: no-repeat;background-size: auto;">
             <p class="nav justify-content-center my-2"><img class="py-2" src="../../assets/img/logo.png" alt="" width="180"/></p>
             <p class="nav justify-content-end px-2" style="color: #ffffff;">comunicate con nosotros (987) 654 3210</p>

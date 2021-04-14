@@ -63,3 +63,6 @@ mdb-card-img img.img-fluid {
     border-style: solid;
     border-image: linear-gradient( to top, #ffc107, rgba(0, 0, 0, 0) ) 1 20%;
 }
+app-card-list {
+    width: 100%;
+}

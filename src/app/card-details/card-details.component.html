@@ -1,0 +1,88 @@
+<div  class="container-fluid"> 
+    <div class="row my-1">
+        <div class="col-12">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb bg-white">
+                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                <li class="breadcrumb-item"><a href="#">List</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Details</li>
+                </ol>
+            </nav>
+        </div>
+        <div class="col-md-7 col-sm-12">
+            <div class="d-flex">
+                <h1 class="col-md-8 col-sm-12">ORZHOV BASILICA</h1>
+                <p class="col-4 d-none d-md-flex" style="display: flex; justify-content: flex-end;">{{listCard.length}} Vendedores</p>
+            </div>
+            <div class="jumbotron d-flex justify-content-center pt-4" style="background-color: #f0f5ff;">
+                <img width="232" class="" src="../../assets/img/card_01.png" alt="">
+            </div>
+            <div class="card">
+                <div class="card-body">
+                  <ul class="list-group">
+                    <li class="list-group-item"><b>Caracteristicas principales</b></li>
+                    <ul class="list-group list-group-horizontal-md">
+                        <li class="list-group-item" style="width: 60%;">Marca</li>
+                        <li class="list-group-item w-100">Wizard of the coast</li>
+                    </ul>
+                    <ul class="list-group list-group-horizontal-md">
+                        <li class="list-group-item" style="width: 60%;">Línea</li>
+                        <li class="list-group-item w-100">Magic, the gathering</li>
+                    </ul>
+                    <ul class="list-group list-group-horizontal-md">
+                        <li class="list-group-item" style="width: 60%;">Modelo</li>
+                        <li class="list-group-item w-100">Mix</li>
+                    </ul>
+                    <ul class="list-group list-group-horizontal-md">
+                        <li class="list-group-item" style="width: 60%;">Cantidad de cartas</li>
+                        <li class="list-group-item w-100">10</li>
+                    </ul>
+                  </ul>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-body">
+                    <b>Descripcion de Carta</b>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec turpis est, lobortis tincidunt magna sed, porta consequat eros. Nullam accumsan vestibulum lobortis. In placerat, ex ut fermentum ultricies, dui justo cursus diam, quis imperdiet diam elit at dui. Mauris lacus velit, auctor nec pharetra non, blandit sit amet dui. Aliquam erat volutpat. Fusce sed erat nunc. Vivamus sit amet sem vel lorem euismod consequat in vel enim. Mauris a dolor luctus, auctor neque ut, vehicula est. Sed nunc velit, gravida in placerat ut, sodales et nisl. Nam vitae placerat erat. Ut sapien purus, suscipit vitae sodales sit amet.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-5">
+            <p class="col-4 d-block d-sm-block d-md-none" style="display: flex; justify-content: flex-end;">{{listCard.length}} Vendedores</p>
+            <div *ngFor="let item of listCard" class="card flex-md-row mb-4 shadow-sm h-md-250" style="flex-direction: row; background-color: rgba(240, 245, 255, 1);">
+                <img class="card-img-right flex-auto d-sm-flex d-lg-block m-3" data-src="holder.js/200x250?theme=thumb" alt="Thumbnail [200x250]" src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22200%22%20height%3D%22250%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20200%20250%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_178ce81a984%20text%20%7B%20fill%3A%23eceeef%3Bfont-weight%3Abold%3Bfont-family%3AArial%2C%20Helvetica%2C%20Open%20Sans%2C%20sans-serif%2C%20monospace%3Bfont-size%3A13pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_178ce81a984%22%3E%3Crect%20width%3D%22200%22%20height%3D%22250%22%20fill%3D%22%2355595c%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%2256.1875%22%20y%3D%22130.8921875%22%3EThumbnail%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E" data-holder-rendered="true" style="width: 80px; height: 120px;">
+                <div class="card-body d-flex flex-column align-items-start">
+                    <div class="row no-gutters">
+                        <div class="col-md-7 col-sm-12">
+                            <p class="card-text mb-auto">Estado: Mal Estado</p>
+                            <p class="card-text mb-auto">Vendedor: Yo merito</p>
+                            <p class="card-text mb-auto">Vendidos: 4</p>
+                            <p class="card-text mb-auto">MXN $50</p>
+                        </div>
+                        <div class="col-md-5 col-sm-12">
+                            <div class="row">
+                                <div class="col align-self-start text-center">
+                                    <i class="fas fa-star" style="color: rgba(249, 205, 63, 1);"></i>
+                                    <i class="fas fa-star" style="color: rgba(249, 205, 63, 1);"></i>
+                                    <i class="fas fa-star" style="color: rgba(249, 205, 63, 1);"></i>
+                                    <i class="fas fa-star" style="color: rgba(249, 205, 63, 1);"></i>
+                                    <i class="far fa-star"></i>
+                                </div><div class="w-100"></div><br><br class="d-none d--md-block">
+                                <div class="col align-self-end">
+                                    <button class="badge badge-pill btn-primary py-2" type="button" style="font-size: smaller; width: 100%">Comprar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+        
+        <div class="col-lg-12 col-sm-12 p-5">
+            <div class="my-3">
+                <b>También te pueden interesar:</b>
+            </div>
+            <app-carousel></app-carousel>
+        </div>
+    </div>
+</div>

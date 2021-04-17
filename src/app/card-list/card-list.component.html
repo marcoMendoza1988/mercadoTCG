@@ -13,9 +13,98 @@ style="display: flex;
 <div class="container-fluid">
     <div class="row my-5">
         <div class="col-12 d-block d-sm-block d-md-none">
-            <button style="width: 100%;font-size: 14pt;" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" class="badge badge-pill btn-primary py-3">Filtros</button>
+            <button style="width: 100%;font-size: 14pt;" type="button" (click)="open(mymodal)" class="badge badge-pill btn-primary py-3">Filtros</button>
             <label style="font-size: 14pt;" for="customRange3" class="form-label my-4">Ordenar por:</label>
         </div>
+        <ng-template #mymodal let-modal>
+            <div class="modal-header">
+              <h4 class="modal-title" id="modal-basic-title">Filtros</h4>
+            </div>
+            <div class="modal-body">
+                <div class="card">
+                    <div class="card-header">
+                        Filtrar por:
+                    </div>
+                    <div class="card-body">
+                        <label for="customRange3" class="form-label my-4">Precio:</label>
+                        <div class="row">
+                            <div class="col-12">         
+                                <ngx-slider [(value)]="minValue" [(highValue)]="maxValue" [options]="options"></ngx-slider>
+                            </div>
+                        </div><hr class="mt-3">
+                        <label for="customRange3" class="form-label my-4">Estado:</label>
+                        <div class="col-12">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                                <label class="form-check-label" for="flexCheckChecked">
+                                  Todos
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                <label class="form-check-label" for="flexCheckDefault">
+                                  Buen
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                <label class="form-check-label" for="flexCheckDefault">
+                                 Regular
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                <label class="form-check-label" for="flexCheckDefault">
+                                  Mal
+                                </label>
+                            </div>  
+                        </div><hr>
+                        <label for="customRange3" class="form-label my-4">Idioma:</label>
+                        <div class="col-12">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                                <label class="form-check-label" for="flexCheckChecked">
+                                  Todos
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                <label class="form-check-label" for="flexCheckDefault">
+                                  Espanol
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                <label class="form-check-label" for="flexCheckDefault">
+                                  Ingles
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                <label class="form-check-label" for="flexCheckDefault">
+                                  Frances
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                <label class="form-check-label" for="flexCheckDefault">
+                                  Italiano
+                                </label>
+                            </div> 
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                <label class="form-check-label" for="flexCheckDefault">
+                                  Chino
+                                </label>
+                            </div>   
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')">Ok</button>
+            </div>
+        </ng-template>
         <div class="col-md-4 d-none d-sm-none d-md-block">
             <div class="card">
                 <div class="card-header">
@@ -101,7 +190,9 @@ style="display: flex;
             <div class="row">
                 <div *ngFor="let item of cardList;let i = index" class="col-md-4 col-6">
                     <div class="card" style="border: none;">
-                        <img src="{{item.img}}" class="card-img-top" alt="...">
+                        <a [routerLink]="['/list/details']" [queryParams]="{debug: true}" queryParamsHandling="merge">
+                            <img src="{{item.img}}" class="card-img-top" alt="..."/>
+                        </a>
                         <div class="card-body px-1">
                             <h5 class="card-title">{{item.title}}</h5>
                             <p class="card-text">Estado: {{item.state}}</p>

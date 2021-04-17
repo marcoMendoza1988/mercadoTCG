@@ -10,6 +10,7 @@ import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import { HomeComponent } from './home/home.component';
 import { CardListComponent } from './card-list/card-list.component';
 import { NgxSliderModule } from '@angular-slider/ngx-slider';
+import { CardDetailsComponent } from './card-details/card-details.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { NgxSliderModule } from '@angular-slider/ngx-slider';
     HeaderComponent,
     CarouselComponent,
     HomeComponent,
-    CardListComponent
+    CardListComponent,
+    CardDetailsComponent
   ],
   imports: [
     BrowserModule,

@@ -5,9 +5,21 @@
     color: #fff; 
     opacity: 0.9;
 }
+.email-contact {
+    position: absolute; 
+    right: 15px;
+}
 @media (max-width: 576px) {    
     .contact_form {
         background-image: url('../assets/img/bg_contactform_mobile.png'); 
         background-size: cover;
+    }
+    .mobile-contact, .email-contact {
+        position: relative;
+        display: block;
+        padding-right: 1rem;
+    }
+    .email-contact {
+        padding-left: 1rem;
     }
 }

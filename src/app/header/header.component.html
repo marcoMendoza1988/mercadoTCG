@@ -17,7 +17,7 @@
         
             
         <!-- Step 3: Toggle the value of the property when the toggler button is clicked. -->
-        <button class="navbar-toggler d-none d-sm-none" type="button" (click)="isMenuCollapsed = !isMenuCollapsed">
+        <button class="navbar-toggler d-none d-sm-none" (click)="open(mymodal)" type="button" (click)="isMenuCollapsed = !isMenuCollapsed">
         &#9776;
         </button>
         
@@ -25,7 +25,7 @@
             <form class="form-inline my-2 my-lg-0">
                 <input class="form-control badge-pill mr-sm-2" type="search" placeholder="Que tarjeta estas buscando?" aria-label="Search">
             </form>
-            <button type="button" class="badge badge-pill ml-5" style="padding-top:12px; padding-bottom:12px;padding-left: 25px;padding-right: 25px;background-color: #0156ff; color: #ffffff;">Iniciar sesión</button>
+            <button type="button" (click)="open(mymodal)" class="badge badge-pill ml-5" style="padding-top:12px; padding-bottom:12px;padding-left: 25px;padding-right: 25px;background-color: #0156ff; color: #ffffff;">Iniciar sesión</button>
             <i class="fas fa-shopping-cart ml-4" style="color: #ffffff;"></i>
         </div>
         <div class="col-12 justify-content-middle d-block d-sm-block d-md-none d-lg-none">
@@ -33,5 +33,48 @@
                 <input class="form-control badge-pill mr-sm-2 p-4" style="width: 100%;" type="search" placeholder="Que tarjeta estas buscando?" aria-label="Search">
             </form>
         </div>
+        <ng-template #mymodal let-modal>
+            <div class="modal-body p-0" [ngSwitch]="usersession">
+                <div *ngSwitchCase="'restoreSession'">
+                    <button type="button" class="close" style="position: absolute; right: 1rem; top: 1rem;" aria-label="Close" (click)="modal.dismiss('Cross click')">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <div class="row" style="margin-right: 0px;">
+                        <div class="col-6 p-0">
+                            <img class="img-fluid" src="../../assets/img/prismari_command_stx_1280x960_wallpaper.png" alt="">
+                        </div>
+                        <div class="col-6 mt-5">
+                            <h5> < Restablecer Contraseña</h5>
+                            <p>Introduce la dirección de correo electrónico asociada a tu cuenta y te enviaremos un correo para restablecer tu contraseña.</p>
+                            <div class="input-group mb-3">
+                                <input type="text" class="form-control mr-sm-2 p-4 badge-pill" placeholder="Correo electronico" aria-describedby="email">
+                            </div>
+                            <button class="btn-primary badge badge-pill p-3" type="submit">Restablecer Contraseña</button>
+                        </div>
+                    </div>
+                </div>
+                <div *ngSwitchCase="'loginSession'">
+                    <button type="button" class="close" style="position: absolute; right: 1rem; top: 1rem;" aria-label="Close" (click)="modal.dismiss('Cross click')">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <div class="row" style="margin-right: 0px;">
+                        <div class="col-6 p-0">
+                            <img class="img-fluid" src="../../assets/img/prismari_command_stx_1280x960_wallpaper.png" alt="">
+                        </div>
+                        <div class="col-6 mt-5">
+                            <img class="img-fluid" src="../../assets/img/logoblack.png" alt=""/>
+                            <p style="text-center">¡BIENVENIDO!, INICIA SESIÓN</p>
+                            <div class="input-group mb-3">
+                                <input type="text" class="form-control mr-sm-2 p-4 badge-pill" placeholder="Correo electronico" aria-describedby="email">
+                            </div>
+                            <div class="input-group mb-3">
+                                <input type="text" class="form-control mr-sm-2 p-4 badge-pill" placeholder="Correo electronico" aria-describedby="email">
+                            </div>
+                            <button class="btn-primary badge badge-pill p-3" type="submit">Iniciar Sesion</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </ng-template>
     </nav>
 </div>

@@ -10,6 +10,14 @@ style="display: flex;
     background-image: url(../../assets/img/main_banner.png);">
     <h1 class="my-3" style="color: #FFFFFF; margin: 0;font-weight: 100; margin: 0 auto;">Listado completo de cartas</h1>
 </div>
+<div class="col-12">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb bg-white">
+            <li class="breadcrumb-item"><a [routerLink]="['/home']">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">List</li>
+        </ol>
+    </nav>
+</div>
 <div class="container-fluid">
     <div class="row my-5">
         <div class="col-12 d-block d-sm-block d-md-none">
@@ -21,7 +29,7 @@ style="display: flex;
               <h4 class="modal-title" id="modal-basic-title">Filtros</h4>
             </div>
             <div class="modal-body">
-                <div class="card">
+                <div class="card" style="margin-bottom: 2rem;">
                     <div class="card-header">
                         Filtrar por:
                     </div>

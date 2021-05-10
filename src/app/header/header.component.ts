@@ -25,7 +25,11 @@ export class HeaderComponent {
     config.keyboard = false;
     config.pauseOnHover = false;
   }
-  
+
+  userSession(){
+    this.usersession = 'restoreSession';
+  }
+
   open(content: any) {
     this.modalService.open(content, { size: 'lg' ,ariaLabelledBy: 'modal-basic-title', centered: true }).result.then((result) => {
       this.closeResult = `Closed with: ${result}`;

@@ -25,7 +25,7 @@
             <form class="form-inline my-2 my-lg-0">
                 <input class="form-control badge-pill mr-sm-2" type="search" placeholder="Que tarjeta estas buscando?" aria-label="Search">
             </form>
-            <button type="button" (click)="open(mymodal)" class="badge badge-pill ml-5" style="padding-top:12px; padding-bottom:12px;padding-left: 25px;padding-right: 25px;background-color: #0156ff; color: #ffffff;">Iniciar sesión</button>
+            <button type="button" (click)="open(mymodal)" class="badge badge-pill ml-5" style="padding-top:12px; padding-bottom:12px;padding-left: 25px;padding-right: 25px;background-color: #0156ff; color: #ffffff;"><i class="far fa-user pr-2"></i> Iniciar sesión</button>
             <i class="fas fa-shopping-cart ml-4" style="color: #ffffff;"></i>
         </div>
         <div class="col-12 justify-content-middle d-block d-sm-block d-md-none d-lg-none">
@@ -36,41 +36,51 @@
         <ng-template #mymodal let-modal>
             <div class="modal-body p-0" [ngSwitch]="usersession">
                 <div *ngSwitchCase="'restoreSession'">
-                    <button type="button" class="close" style="position: absolute; right: 1rem; top: 1rem;" aria-label="Close" (click)="modal.dismiss('Cross click')">
+                    <button type="button" class="close d-none d-md-block" style="position: absolute; right: 1rem; top: 1rem;" aria-label="Close" (click)="modal.dismiss('Cross click')">
                         <span aria-hidden="true">&times;</span>
                     </button>
-                    <div class="row" style="margin-right: 0px;">
-                        <div class="col-6 p-0">
-                            <img class="img-fluid" src="../../assets/img/prismari_command_stx_1280x960_wallpaper.png" alt="">
+                    <div class="row" style="margin: 0px;">
+                        <div class="col-md-6 col-sm-12 p-0">
+                            <img class="img-fluid d-none d-sm-none d-md-block" src="../../assets/img/prismari_command_stx_1280x960_wallpaper.png" alt="">
+                            <img class="img-fluid d-md-none" style="width: 100%;" src="../../assets/img/command_stx.png" alt="">
                         </div>
-                        <div class="col-6 mt-5">
+                        <div class="col-md-6 col-sm-12 mt-5">
                             <h5> < Restablecer Contraseña</h5>
                             <p>Introduce la dirección de correo electrónico asociada a tu cuenta y te enviaremos un correo para restablecer tu contraseña.</p>
                             <div class="input-group mb-3">
                                 <input type="text" class="form-control mr-sm-2 p-4 badge-pill" placeholder="Correo electronico" aria-describedby="email">
-                            </div>
-                            <button class="btn-primary badge badge-pill p-3" type="submit">Restablecer Contraseña</button>
+                            </div><br>
+                            <div class="col-12 d-flex justify-content-end">
+                                <button class="btn-primary badge badge-pill p-3" type="submit">Restablecer Contraseña</button>
+                            </div><br>
                         </div>
                     </div>
                 </div>
                 <div *ngSwitchCase="'loginSession'">
-                    <button type="button" class="close" style="position: absolute; right: 1rem; top: 1rem;" aria-label="Close" (click)="modal.dismiss('Cross click')">
+                    <button type="button" class="close d-none d-md-block" style="position: absolute; right: 1rem; top: 1rem;" aria-label="Close" (click)="modal.dismiss('Cross click')">
                         <span aria-hidden="true">&times;</span>
                     </button>
-                    <div class="row" style="margin-right: 0px;">
-                        <div class="col-6 p-0">
-                            <img class="img-fluid" src="../../assets/img/prismari_command_stx_1280x960_wallpaper.png" alt="">
+                    <div class="row" style="margin: 0px;">
+                        <div class="col-md-6 col-sm-12 p-0">
+                            <img class="img-fluid d-none d-sm-none d-md-block" src="../../assets/img/prismari_command_stx_1280x960_wallpaper.png" alt="">
+                            <img class="img-fluid d-md-none" style="width: 100%;" src="../../assets/img/command_stx.png" alt="">
                         </div>
-                        <div class="col-6 mt-5">
-                            <img class="img-fluid" src="../../assets/img/logoblack.png" alt=""/>
-                            <p style="text-center">¡BIENVENIDO!, INICIA SESIÓN</p>
+                        <div class="col-md-6 col-sm-12 mt-5">
+                            <img class="img-fluid mx-auto d-block" src="../../assets/img/logoblack.png" alt=""/>
+                            <p style="text-align: center;">¡BIENVENIDO!, INICIA SESIÓN</p>
                             <div class="input-group mb-3">
-                                <input type="text" class="form-control mr-sm-2 p-4 badge-pill" placeholder="Correo electronico" aria-describedby="email">
+                                <input type="text" style="background-color: #007bff4f;" class="form-control mr-sm-2 p-4 badge-pill" placeholder="Correo electronico" aria-describedby="email">
                             </div>
                             <div class="input-group mb-3">
-                                <input type="text" class="form-control mr-sm-2 p-4 badge-pill" placeholder="Correo electronico" aria-describedby="email">
+                                <input type="text" style="background-color: #007bff4f;" class="form-control mr-sm-2 p-4 badge-pill" placeholder="Contraseña" aria-describedby="password">
                             </div>
-                            <button class="btn-primary badge badge-pill p-3" type="submit">Iniciar Sesion</button>
+                            <div class="col-12 d-flex justify-content-end">
+                                <button class="btn-primary badge badge-pill p-3" type="submit"><i class="far fa-user fa-2x pr-3"></i> Iniciar Sesion</button>
+                            </div><br>
+                            <div class="col-12 text-right">
+                                <a [routerLink]="['/#']" routerLinkActive="router-link-active">¿Olvidaste tu contraseña?</a><br>
+                                <a (click)="userSession()" [routerLink]="['/#']" routerLinkActive="router-link-active">¿No tienes cuenta?, Regístrate!</a>
+                            </div><br>
                         </div>
                     </div>
                 </div>

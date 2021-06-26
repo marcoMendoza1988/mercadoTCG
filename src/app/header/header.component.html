@@ -69,10 +69,10 @@
                             <img class="img-fluid mx-auto d-block" src="../../assets/img/logoblack.png" alt=""/>
                             <p style="text-align: center;">¡BIENVENIDO!, INICIA SESIÓN</p>
                             <div class="input-group mb-3">
-                                <input type="text" style="background-color: #007bff4f;" class="form-control mr-sm-2 p-4 badge-pill" placeholder="Correo electronico" aria-describedby="email">
+                                <input type="text" style="background-color: #EFEFEF;" class="form-control mr-sm-2 p-4 badge-pill" placeholder="Correo electronico" aria-describedby="email">
                             </div>
                             <div class="input-group mb-3">
-                                <input type="text" style="background-color: #007bff4f;" class="form-control mr-sm-2 p-4 badge-pill" placeholder="Contraseña" aria-describedby="password">
+                                <input type="text" style="background-color: #EFEFEF;" class="form-control mr-sm-2 p-4 badge-pill" placeholder="Contraseña" aria-describedby="password">
                             </div>
                             <div class="col-12 d-flex justify-content-end">
                                 <button class="btn-primary badge badge-pill p-3" type="submit"><i class="far fa-user fa-2x pr-3"></i> Iniciar Sesion</button>
@@ -83,6 +83,45 @@
                             </div><br>
                         </div>
                     </div>
+                </div>
+                <div *ngSwitchCase="'createAcount'">
+                    <div class="row" style="margin: 0px;">
+                        <div class="col-md-12 p-0">
+                            <img class="img-fluid" style="width: 100%;" src="../../assets/img/command_stx.png" alt="">
+                        </div>
+                        <div class="col-12">
+                            <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="col-12 mt-2">
+                            <b>Creación de cuenta</b>
+                            <p>¡Crea una cuenta para utilizar los servicios de My Transfer y gozar sus inumerables beneficios!</p>
+                        </div>
+                        <div class="col-md-6 col-sm-12">
+                            <div class="input-group mb-3">
+                                <input type="text" style="background-color: #EFEFEF;" class="form-control mr-sm-2 p-4 badge-pill" placeholder="Nombre(s)" aria-describedby="nombre">
+                            </div>
+                            <div class="input-group mb-3">
+                                <input type="text" style="background-color: #EFEFEF;" class="form-control mr-sm-2 p-4 badge-pill" placeholder="Correo electronico" aria-describedby="email">
+                            </div>
+                            <div class="input-group mb-3">
+                                <input type="text" style="background-color: #EFEFEF;" class="form-control mr-sm-2 p-4 badge-pill" placeholder="Telefono" aria-describedby="telelfono">
+                            </div><br>
+                        </div>
+                        <div class="col-md-6 col-sm-12">
+                            <div class="input-group mb-3">
+                                <input type="text" style="background-color: #EFEFEF;" class="form-control mr-sm-2 p-4 badge-pill" placeholder="Correo electronico" aria-describedby="email">
+                            </div>
+                            <div class="input-group mb-3">
+                                <input type="text" style="background-color: #EFEFEF;" class="form-control mr-sm-2 p-4 badge-pill" placeholder="Correo electronico" aria-describedby="email">
+                            </div>
+                        </div>
+                        <div class="col-12 d-flex justify-content-end">
+                            <button class="btn-primary badge badge-pill p-3 mr-3" type="submit">Cancelar</button>
+                            <button class="btn-primary badge badge-pill p-3" type="submit">Crear cuenta</button>
+                        </div>
+                    </div><br><br>
                 </div>
             </div>
         </ng-template>

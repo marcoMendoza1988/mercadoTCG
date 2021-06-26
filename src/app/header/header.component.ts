@@ -31,6 +31,7 @@ export class HeaderComponent {
   }
 
   open(content: any) {
+    this.usersession = 'loginSession';
     this.modalService.open(content, { size: 'lg' ,ariaLabelledBy: 'modal-basic-title', centered: true }).result.then((result) => {
       this.closeResult = `Closed with: ${result}`;
     }, (reason) => {
